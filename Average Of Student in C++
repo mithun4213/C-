@@ -43,4 +43,4 @@ int main()
 	a.diaplay();
 	return 0;
 }
-Footer
+
