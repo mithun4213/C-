@@ -1,23 +1,29 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
-int main()
-{
-	int a,b,c,choice;
-	cout<<"provide your choice";
-	cin>>choice;
-	switch (choice)
-	{
-		case1:
-			c=a+b;
-			cout<<"addition c="<<c;
-			break;
-		case2:
-			c=a-b;
-			cout<<"subtraction c="<<c;
-			break;
-		default:
-			cout<<"provide choice between 1-2";
-			break;
-	}
+class student{
+	int no;
+	string name;
+	public:
+		student();
+		student(int,char *);
+	void display();
+};
+student::student(){
+	no=0;
+	name="unknown";
 }
-Footer
+student::student(int x,char *y){
+	no=x;
+	name=y;
+}
+void student::display(){
+	cout<<"reg no:"<<no<<endl;
+	cout<<"name:"<<name<<endl;
+}
+int main(){
+	student s();
+	student s1(123,"Mithun");
+	s1.display();
+	return 0;
+}
